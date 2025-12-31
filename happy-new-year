@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy New Year 🎉</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background: #ff4e50;
+      color: white;
+      border-radius: 5px;
+    }
+    h1 {
+      color: #ff4e50;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>Enter Your Name</h1>
+  <input type="text" id="name" placeholder="Your name">
+  <br>
+  <button onclick="showWish()">Submit</button>
+  <h2 id="result"></h2>
+</div>
+
+<script>
+  function showWish() {
+    let name = document.getElementById("name").value;
+    if (name.trim() === "") {
+      alert("Please enter your name");
+      return;
+    }
+    document.getElementById("result").innerHTML =
+      "🎉 Happy New Year, <b>" + name + "</b>! 🎉";
+  }
+</script>
+
+</body>
+</html>
